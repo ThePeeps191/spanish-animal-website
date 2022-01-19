@@ -4,131 +4,121 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mis Animales Favoritos</title>
 	<style>
+h1 {
+		font-family: "Segoe UI Emoji";
+}
+
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .slider {
-  width: 300px;
-  text-align: center;
-  overflow: hidden;
+	width: 300px;
+	text-align: center;
+	overflow: hidden;
 }
 
 .slides {
-  display: flex;
-  
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  
-  
-  
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  
-  /*
-  scroll-snap-points-x: repeat(300px);
-  scroll-snap-type: mandatory;
-  */
+	display: flex;
+	
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	
+	
+	
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	
+	/*
+	scroll-snap-points-x: repeat(300px);
+	scroll-snap-type: mandatory;
+	*/
 }
 .slides::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+	width: 10px;
+	height: 10px;
 }
 .slides::-webkit-scrollbar-thumb {
-  background: black;
-  border-radius: 10px;
+	background: black;
+	border-radius: 10px;
 }
 .slides::-webkit-scrollbar-track {
-  background: transparent;
+	background: transparent;
 }
 .slides > div {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  width: 300px;
-  height: 300px;
-  margin-right: 50px;
-  border-radius: 10px;
-  background: #eee;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-/*  font-size: 100px;*/
+	scroll-snap-align: start;
+	flex-shrink: 0;
+	width: 300px;
+	height: 300px;
+	margin-right: 50px;
+	border-radius: 10px;
+	background: #eee;
+	transform-origin: center center;
+	transform: scale(1);
+	transition: transform 0.5s;
+	position: relative;
+	
+/*	display: flex;
+	flex-direction: column;*/
+/*	justify-content: center;*/
+	text-align: center;
+/*	font-size: 100px;*/
 }
 .slides > div:target {
-/*   transform: scale(0.8); */
-}
-.author-info {
-  background: rgba(0, 0, 0, 0.75);
-  color: white;
-  padding: 0.75rem;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-}
-.author-info a {
-  color: white;
-}
-img {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/*	 transform: scale(0.8); */
 }
 
 .slider > a {
-  display: inline-flex;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: white;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 0 0.5rem 0;
-  position: relative;
+	display: inline-flex;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: white;
+	text-decoration: none;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin: 0 0 0.5rem 0;
+	position: relative;
 }
 .slider > a:active {
-  top: 1px;
+	top: 1px;
 }
 .slider > a:focus {
-  background: #000;
+	background: #000;
 }
 
 /* Don't need button navigation */
 @supports (scroll-snap-type) {
-  .slider > a {
-    display: none;
-  }
+	.slider > a {
+		display: none;
+	}
 }
 
 html, body {
-  height: 100%;
-  overflow: hidden;
+	height: 100%;
+	overflow: hidden;
 }
 body {
-/*  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;*/
-  font-family: 'Segoe UI', sans-serif;
+/*	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;*/
+	font-family: 'Segoe UI', sans-serif;
 }
 
+.emoji {
+	font-family: "Segoe UI Emoji";
+}
+
+a {
+	color: blue;
+}
 </style>
 </head>
 <body>
-	<h1>Mis Animales Favoritos - Danny</h1>
+	<h1>Mis Animales Favoritos - Danny</h1><img src="https://learnmonkey.github.io/images/logo.png" style="width:100px;height:100px;float:right;">
 	<div class="slider">
-		<a href="#slide-1">1</a>
+		<a href="#slide-1" onclick="">1</a>
 		<a href="#slide-2">2</a>
 		<a href="#slide-3">3</a>
 		<a href="#slide-4">4</a>
@@ -141,39 +131,47 @@ body {
 
 	<div class="slides">
 		<div id="slide-1">
-			<h1>Mono</h1>
-
-			<p>Un mono es muy gordo!</p>
+			<h1>#1 Chimpancé</h1>
+			<p>
+¡Un chimpancé es muy, muy inteligente! ¡Come muchos platános y se balancea en los árboles! Chimpancés vive en selvas tropicales.</p>
 		</div>
 		<div id="slide-2">
-			2
+			<h1>#2 Gorila</h1>
+			<p>¡Una gorila es muy fuerte y es negra y gris! Es como un mono grande. Es un simio.</p>
 		</div>
 		<div id="slide-3">
-			3
+			<h1>#3 Pingüino</h1>
+			<p>Un pingüino vive en el frío. Es negro, blanco y naranja. Caza peces.</p>
 		</div>
 		<div id="slide-4">
-			4
+			<h1>#4 Elefante</h1>
+			<p>Un elefante es enorme y gris. Se alimenta de las hojas de un árbol. Tiene un tronco largo y fuerte.</p>
 		</div>
 		<div id="slide-5">
-			5
+			<h1>#5 Tigre</h1>
+			<p>Un tigre es naranja. Tiene rayas negras. Carne de caza para comer.</p>
 		</div>
 		<div id="slide-6">
-			6
+			<h1>#6 León</h1>
+			<p>Un león es poderoso. Caza carne. Un león macho tiene melena.</p>
 		</div>
 		<div id="slide-7">
-			7
+			<h1>#7 Zorro</h1>
+			<p>Un zorro es naranja. Vive en el bosque. También caza carne.</p>
 		</div>
 		<div id="slide-8">
-			8
+			<h1>#8 Ballena</h1>
+			<p>Una ballena es un mamífero. Suele ser grande. A veces, es pequeño sin embargo. Se alimenta de otros peces.</p>
 		</div>
 		<div id="slide-9">
-			9
+			<h1>#9 Serpiente</h1>
+			<p>Una serpiente vive en el bosque. Suele ser verde y marrón. A veces es venenosa o venenosa.</p>
 		</div>
 		<div id="slide-10">
-			10
+			<h1>#10 Lobo</h1>
+			<p>Un lobo es gris. Carne de caza para comer. Aullidos</p>
 		</div>
 	</div>
 </div>
-
 </body>
 </html> 
